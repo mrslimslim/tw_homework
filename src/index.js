@@ -1,11 +1,10 @@
-import React from "react";
-import * as ReactDOM from "react-dom";
+import React from 'react'
+import * as ReactDOM from 'react-dom'
 import App from '@src/App'
-
 
 const render = Component => {
   ReactDOM.render(
-        <Component />,
+    <Component />,
     document.getElementById('app')
   )
 }
