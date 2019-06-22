@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './Header'
-import Menu from './Menu'
-import LogTable from './LogTable'
-import { menu, asynchronousComponents } from './Menu/menu'
+import Footer from './Footer'
+import SiderMenu from './SiderMenu'
+import LogTable from './LogHistory'
+import { menu, asynchronousComponents } from './SiderMenu/menu'
 
 export default class Home extends Component {
   render () {
@@ -12,7 +13,7 @@ export default class Home extends Component {
         <Header />
         <section className='content'>
           <div className='left-side'>
-            <Menu />
+            <SiderMenu />
             <LogTable />
           </div>
           <div className='right-side'>
@@ -36,6 +37,7 @@ export default class Home extends Component {
             </Router>
           </div>
         </section>
+        <Footer />
       </section>
     )
   }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Header () {
+export default function Summary () {
   return (
     <div>
-        Header
+      Summary
     </div>
   )
 }

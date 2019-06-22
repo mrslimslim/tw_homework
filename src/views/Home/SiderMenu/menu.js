@@ -8,27 +8,26 @@ const loadComponent = (loader) =>
   })
 
 export const asynchronousComponents = {
-  DashboardPage: loadComponent(() => import(/* webpackChunkName: "dashboardpage" */ '@pages/DashboardPage')),
-  AgentPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/AgentPage')),
-  MycruisePage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/MycrsilfPage')),
-  HelpPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/HelpPage'))
+  DashboardPage: loadComponent(() => import(/* webpackChunkName: "dashboardpage" */ '@pages/Home/DashboardPage')),
+  AgentPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/AgentPage')),
+  MycruisePage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/MycruisePage')),
+  HelpPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/HelpPage'))
 }
 
 export const menu = [
   {
     id: 1,
-    path: '/',
+    path: '/dashboard',
     title: 'DASHBOARD',
     icon: 'dashboard',
     component: 'DashboardPage',
     exact: true
   }, {
     id: 2,
-    path: '/agent',
+    path: '/',
     title: 'AGENT',
     icon: 'agent',
-    component: 'AgentPage',
-    exact: true
+    component: 'AgentPage'
   }, {
     id: 3,
     path: '/mycruise',

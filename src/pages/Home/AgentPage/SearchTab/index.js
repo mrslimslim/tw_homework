@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Header () {
+export default function SearchTab () {
   return (
     <div>
-        Header
+        SearchTab
     </div>
   )
 }

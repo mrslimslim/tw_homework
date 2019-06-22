@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Header () {
+export default function Badge () {
   return (
     <div>
-        Header
+        Badge
     </div>
   )
 }

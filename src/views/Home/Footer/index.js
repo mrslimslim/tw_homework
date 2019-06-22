@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Header () {
+export default function Footer () {
   return (
     <div>
-        Header
+        Footer
     </div>
   )
 }

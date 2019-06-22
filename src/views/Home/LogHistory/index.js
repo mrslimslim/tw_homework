@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function LogTable () {
+export default function LogHistory () {
   return (
     <div>
-            LogTable
+        LogHistory
     </div>
   )
 }

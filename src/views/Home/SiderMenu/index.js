@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import pathToRegexp from 'path-to-regexp'
-import menu from './../menu'
-import { arrayToTree, queryArray } from '@utils/index'
-const { SubMenu } = Menu
+import menu from './menu'
+import { arrayToTree, queryArray } from '@utils'
+import Menu from '@components/Menu/Menu'
+import MenuItem from '@components/Menu/MenuItem'
 
 export default class SiderMenu extends Component {
     getPathArray = (array, current) => {
@@ -17,31 +18,22 @@ export default class SiderMenu extends Component {
       return result
     }
 
+    goto = ({ key }) => {
+      const { history } = this.props.routerStore
+      const selectedMenu = menu.find(item => String(item.id) === key)
+      if (selectedMenu && selectedMenu.path && selectedMenu.path !== this.currentRoute) {
+        history.push(selectedMenu.path)
+      }
+    }
+
     getMenus = (menuTree) => {
       return menuTree.map(item => {
-        if (item.children) {
-          if (item.pid) {
-            this.levelMap[item.id] = item.pid
-          }
-          return (
-            <SubMenu
-              key={String(item.id)}
-              title={
-                <span>
-                  {item.icon && <Icon type={item.icon} />}
-                  <span>{item.title}</span>
-                </span>
-              }
-            >
-              {this.getMenus(item.children)}
-            </SubMenu>
-          )
-        }
+        const { id, ...rest } = item
         return (
-          <Menu.Item key={String(item.id)}>
+          <MenuItem key={String(id)} {...rest}>
             {item.icon && <i className='iconfont icon-emojiflashfill' />}
             <span>{item.title}</span>
-          </Menu.Item>
+          </MenuItem>
         )
       })
     }
@@ -70,9 +62,9 @@ export default class SiderMenu extends Component {
           className='menu'
           mode='inline'
           selectedKeys={selectedKeys}
-          onClick={this.goto}
-          {...this.menuProps}>
-          {menuItems}
+          {...this.menuProps}
+        >
+          { menuItems }
         </Menu>
       )
     }

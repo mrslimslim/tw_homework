@@ -59,7 +59,8 @@ module.exports = {
         alias: {
             "@src":path.resolve(__dirname,"../src/"),
             "@views":path.resolve(__dirname,"../src/views/"),
-            "@shared":path.resolve(__dirname,"../src/shared/"),
+            "@pages":path.resolve(__dirname,"../src/pages/"),
+            "@utils":path.resolve(__dirname,"../src/utils/"),
             "@components":path.resolve(__dirname,"../src/components/"),
         },
         modules:[path.resolve(__dirname,'../src'),'node_modules']
