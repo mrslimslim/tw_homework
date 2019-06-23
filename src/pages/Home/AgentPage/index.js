@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import Overviews from './Overviews'
 import Navbar from './Navbar'
 import AgentList from './AgentList'
+import Modal from '@components/Modal'
 
 export default class AgentPage extends Component {
   render () {
@@ -11,7 +12,9 @@ export default class AgentPage extends Component {
       <div className='tw-agent'>
         <Overviews />
         <Navbar />
-        <AgentList />
+        <AgentList renderModal={info => (
+          <Modal info={info} />
+        )} />
       </div>
     )
   }

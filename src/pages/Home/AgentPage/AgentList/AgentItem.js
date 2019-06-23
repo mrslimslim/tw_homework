@@ -5,6 +5,10 @@ export default class AgentItem extends Component {
     this.props.onDeleteResource(id, index)
   }
 
+  onOpenModal = () => {
+    this.props.onOpenModal(this.props.id)
+  }
+
   render () {
     const { os, status, name, ip, location, resources, id } = this.props
     return (
@@ -30,7 +34,7 @@ export default class AgentItem extends Component {
           </div>
           <div className='agent-operations'>
             <div className='operation-group'>
-              <button className='add-button'>
+              <button className='add-button' onClick={this.onOpenModal}>
                 <i className='cruisefont icon-plus' />
               </button>
               {resources.map((resource, index) => {
