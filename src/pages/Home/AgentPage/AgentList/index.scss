@@ -1,0 +1,125 @@
+.tw-agent-list{
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    .tw-agent-item{
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        .platform-img{
+            min-width: 80px;
+            height: 80px;
+            background-color: #d4d4d4;
+            margin-right: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .agent-info{
+            flex: 1 1 auto;
+            margin-left: 25px;
+            .agent-status{
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                .server-site{
+                  display: flex;
+                  align-items: center;
+                  margin-right: 15px;
+                  .server-name{
+                      margin-left: 8px;
+                  }
+                }
+                .status{
+                    color: #ffffff;
+                    padding: 2px 8px;
+                    margin-right: 40px; 
+                }
+                .ip-site{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 15px;
+                    .cruisefont{
+                        margin-left: 8px;
+                        font-size: 14px;
+                        color: #acacac;
+                    }
+                    .ip-name{
+                        margin-left: 8px;
+                    }
+                }
+                .location-info{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 15px;
+                    .cruisefont{
+                        margin-left: 8px;
+                        font-size: 14px;
+                        color: #acacac;
+                    }
+                    .location-name{
+                        margin-left: 8px;
+                    }
+                }
+            }
+            .agent-operations{
+                display: flex;
+                justify-content: space-between;
+                button{
+                    display: inline-flex;
+                    align-items: center;
+                    margin: 5px;
+                    border: none;
+                    font-size: 14px;
+                    outline: none;
+                    cursor: pointer;
+                    color: #FFFFFF;
+                    padding: 3px 10px;
+                    background-color: #00B4CF;
+                }
+                .operation-group{
+                    flex: 1 1 auto;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    .add-button{
+                        padding: 3px 4px;
+                        &:hover{
+                            background-color: #01869A;
+                        }
+                    }
+                    .resource-button{
+                        color: #2D4054;
+                        background-color: #EFEFEF;
+                        .cruisefont{
+                            margin-left: 8px;
+                            font-size: 16px;
+                        }
+
+                    }
+                }
+                .deny-button{
+                    padding: 0 10px;
+                    height: 30px;
+                    line-height: 30px;
+                    width: 88px;
+                    text-align: center;
+                    &:hover{
+                        background-color: #01869A;
+                    }
+                    .cruisefont{
+                        font-size: 14px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

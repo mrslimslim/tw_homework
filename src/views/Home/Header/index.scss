@@ -1,0 +1,18 @@
+.header {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    line-height: 64px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    a{
+        height: 64px;
+        display: block;
+        padding-top: 13px;
+        img{
+            height: 40px;
+        }
+    }
+    
+}

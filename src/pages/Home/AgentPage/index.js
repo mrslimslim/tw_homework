@@ -1,13 +1,17 @@
+import './index.scss'
+
 import React, { Component } from 'react'
-import ListItem from './ListItem'
-import SearchTab from './SearchTab'
+import Overviews from './Overviews'
+import Navbar from './Navbar'
+import AgentList from './AgentList'
 
 export default class AgentPage extends Component {
   render () {
     return (
-      <div>AgentPage
-        <ListItem />
-        <SearchTab />
+      <div className='tw-agent'>
+        <Overviews />
+        <Navbar />
+        <AgentList />
       </div>
     )
   }

@@ -10,7 +10,7 @@ const loadComponent = (loader) =>
 export const asynchronousComponents = {
   DashboardPage: loadComponent(() => import(/* webpackChunkName: "dashboardpage" */ '@pages/Home/DashboardPage')),
   AgentPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/AgentPage')),
-  MycruisePage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/MycruisePage')),
+  MyCruisePage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/MyCruisePage')),
   HelpPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/HelpPage'))
 }
 
@@ -19,27 +19,28 @@ export const menu = [
     id: 1,
     path: '/dashboard',
     title: 'DASHBOARD',
-    icon: 'dashboard',
+    icon: 'icon-dashboard',
     component: 'DashboardPage',
     exact: true
   }, {
     id: 2,
     path: '/',
     title: 'AGENT',
-    icon: 'agent',
-    component: 'AgentPage'
+    icon: 'icon-sitemap',
+    component: 'AgentPage',
+    exact: true
   }, {
     id: 3,
     path: '/mycruise',
-    title: 'MYCRUISE',
-    icon: 'mycruise',
-    component: 'MycruisePage',
+    title: 'MY CRUISE',
+    icon: 'icon-boat',
+    component: 'MyCruisePage',
     exact: true
   }, {
     id: 4,
-    path: '/agent',
+    path: '/help',
     title: 'HELP',
-    icon: 'help',
+    icon: 'icon-life-bouy',
     component: 'HelpPage',
     exact: true
   }

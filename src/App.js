@@ -1,3 +1,6 @@
+import './style/font_icons/fonts.css'
+import './index.scss'
+
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
 import Loadable from 'react-loadable'
@@ -16,7 +19,7 @@ const Login = Loadable({
   loading: PageLoading
 })
 
-const AppWrapper = props => <div>{props.children}</div>
+const AppWrapper = props => <React.Fragment>{props.children}</React.Fragment>
 
 class App extends React.Component {
   render () {

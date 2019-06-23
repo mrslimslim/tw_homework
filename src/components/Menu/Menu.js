@@ -1,10 +1,7 @@
+import './index.scss'
 import React, { Component } from 'react'
 
 export default class Menu extends Component {
-  componentDidMount () {
-
-  }
-
   render () {
     const props = { ...this.props }
     return (

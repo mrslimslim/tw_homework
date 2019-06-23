@@ -1,0 +1,28 @@
+$menuItemBgColor: #2D4054;
+$menuItemHoverBgColor: #435466;
+$menuHoverColor: #00B4CF;
+
+.tw_menu_item{
+    width: 250px;
+    background-color: $menuItemBgColor;
+    cursor: pointer;  
+    &:hover {
+        background-color: $menuItemHoverBgColor;
+        color: $menuHoverColor;
+    }
+    &.active{
+        color: #00b4cf;
+        background-color: #465464;
+    }
+    a{
+        display: flex;
+        padding: 13px 20px 12px;
+        text-decoration: none;
+        font-size: 14px;
+        align-items: center;
+        .cruisefont {
+            font-size: 20px;
+            margin-right: 15px;
+        }
+    }
+}

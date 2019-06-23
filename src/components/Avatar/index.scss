@@ -1,0 +1,57 @@
+.tw-avatar{
+    position: relative;
+    padding: 12px;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    &:hover{
+        .user-menu{
+            display: block;
+        }
+    }
+    .avatar-img{
+       width: 40px;
+       height: 40px;
+       margin-right: 10px;
+       border-radius: 50%;
+       vertical-align: middle;
+       overflow: hidden; 
+       img{
+           width: 100%;
+           height: 100%;
+       }
+    }
+    .icon-angle-down{
+        font-size: 20px;
+        color: #435466;
+    }
+    .user-menu{
+        position: absolute;
+        right: 0;
+        top: 100%;
+        display: none;
+        padding: 10px 0;
+        background-color: #ffffff;
+        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+        li{
+            padding: 8px 12px;
+            height: 32px;
+            color: #2d4054;
+            display: flex;
+            align-items: center;
+            min-width: 152px;
+            cursor: pointer;
+            box-sizing: border-box;
+            &:hover{
+              background: #ededed;
+            }
+            .curisefont{
+                font-size: 14px;
+            }
+            span{
+                padding-left: 10px;
+            }
+        }
+    }
+}

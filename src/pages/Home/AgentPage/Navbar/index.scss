@@ -1,0 +1,60 @@
+.tw_navbar{
+    display: flex;
+    margin-top: 15px;
+    padding-right: 10px;
+    align-items: center;
+    background-color: #ffffff;
+    .tab{
+      display: flex;
+      .item{
+        height: 50px;
+        line-height: 50px;
+        padding: 0 25px;
+        min-width: 80px;
+        cursor: pointer;
+        text-align: center;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        border-right: 1px solid #f3f3f3;
+        border-bottom: 3px solid #ffffff;
+        background-color: #ffffff;
+        &.active{
+          color: #00B4CF;
+          border-bottom-color: #00B4CF;   
+        }
+      }
+    }
+    .input-search{
+        position: relative;
+        padding: 8px 80px 8px 10px;
+        background-color: #FFFFFF;
+        margin-left: 10px;
+        flex: 1;
+        .cruisefont{
+          font-size: 20px;
+          color: #979797;
+          position: absolute;
+          margin-top: 5px;
+          margin-left: 8px;
+        }
+        input{
+          min-width: 170px;
+          height: 32px;
+          border: none;
+          outline: none;
+          font-size: 14px;
+          padding-left: 34px;
+          background-color: #f3f3f3;
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;            
+        }
+
+    }
+    .layout-icon{
+        margin: 0 10px;
+        cursor: pointer;
+        font-size: 20px;
+        &.active{
+            color: #00b4cf;
+        }
+    }
+}

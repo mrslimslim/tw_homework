@@ -1,0 +1,25 @@
+.tw_overview{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    position: relative;
+    width: 270px;
+    height: 115px;
+    padding: 12px;
+    color: #ffffff;
+    box-sizing: border-box;
+    background-color: #ffffff;     
+    .item{
+        color: #435466;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;  
+        span:last-child{
+            margin-top: 30px;
+            font-size: 20px;
+            color: #000000;
+        }      
+    }  
+}

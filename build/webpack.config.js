@@ -24,7 +24,7 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test:/\.(css|scss)/,
+                test:/\.(css|scss)$/,
                 use: [
                     "style-loader", // creates style nodes from JS strings will inject a <style> tag inside the HTML file
                     "css-loader", // translates CSS into CommonJS  这就是css-loader的参数表，其中你的webpack-config.js中loader字段中的css-loader配置后面添加modules，就可以开启CSS Modules
@@ -44,13 +44,16 @@ module.exports = {
                   },
                   "css-loader"
                 ]
-            },
-            {
-                test: /\.(jpg|jpeg|png|gif|map3|svg)/,
-                loaders:["file-loader"]
             },{
-                test:/\.(eot|ttf|svg|woff2?)(\?.*)?$/,
-                loaders:"url-loader?limit=100&name=fonts/[name].[ext]"
+                test: /\.(jpg|jpeg|png|gif|svg)/,
+                loaders:["file-loader?assets/[name].[ext]?[hash]"]
+            },{
+                test:/\.(eot|ttf|woff2?)(\?.*)?$/,
+                loaders:"url-loader",
+                options: {
+                  limit: 100,
+                  name: "name=fonts/[name].[ext]"
+                }
             }
         ]
     },

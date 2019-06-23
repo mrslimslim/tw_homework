@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import cs from 'classnames'
 
 export default class MenuItem extends Component {
   componentDidMount () {
@@ -7,28 +8,17 @@ export default class MenuItem extends Component {
   }
 
   onClick = () => {
-    const props = { ...this.props }
-    console.log(props)
-  }
-
-  onMouseEnter = () => {
-    console.log('enter')
-  }
-
-  onMouseLeave = () => {
-    console.log('leave')
+    const { switchPage, id } = this.props
+    switchPage(id)
   }
 
   render () {
     const props = { ...this.props }
-    const style = { ...props.style }
     const mouseEvent = {
-      onClick: props.disabled ? null : this.onClick,
-      onMouseLeave: props.disabled ? null : this.onMouseLeave,
-      onMouseEnter: props.disabled ? null : this.onMouseEnter
+      onClick: props.disabled ? null : this.onClick
     }
     return (
-      <li className='tw_menu' style={style} {...mouseEvent}>
+      <li className={cs('tw_menu_item', { 'active': props.isActive })} {...mouseEvent}>
         <Link to={props.path}>
           {props.children}
         </Link>
