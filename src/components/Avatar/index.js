@@ -6,7 +6,7 @@ export default function Avatar () {
   return (
     <div className='tw-avatar'>
       <div className='avatar-img'>
-        <img src='../../assets/mockups/1/Guide.png' />
+        <img src='./assets/images/windows.png' />
       </div>
       <i className='cruisefont icon-angle-down' />
       <ul className='user-menu'>

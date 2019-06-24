@@ -14,7 +14,7 @@ export default class AgentItem extends Component {
     return (
       <div className='tw-agent-item'>
         <div className='platform-img'>
-          <img src={`../../../../assets/os/${os}.png`} />
+          <img src={`./assets/images/${os}.png`} />
         </div>
         <div className='agent-info'>
           <div className='agent-status'>
