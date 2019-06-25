@@ -9,9 +9,9 @@ const loadComponent = (loader) =>
 
 export const asynchronousComponents = {
   DashboardPage: loadComponent(() => import(/* webpackChunkName: "dashboardpage" */ '@pages/Home/DashboardPage')),
-  AgentPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/AgentPage')),
-  MyCruisePage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/MyCruisePage')),
-  HelpPage: loadComponent(() => import(/* webpackChunkName: "dashboard" */ '@pages/Home/HelpPage'))
+  AgentPage: loadComponent(() => import(/* webpackChunkName: "agentpage" */ '@pages/Home/AgentPage')),
+  MyCruisePage: loadComponent(() => import(/* webpackChunkName: "mycuisepage" */ '@pages/Home/MyCruisePage')),
+  HelpPage: loadComponent(() => import(/* webpackChunkName: "helpgage" */ '@pages/Home/HelpPage'))
 }
 
 export const menu = [

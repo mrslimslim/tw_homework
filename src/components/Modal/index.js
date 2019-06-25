@@ -12,7 +12,6 @@ export default class Modal extends Component {
   componentDidMount () {
     document.addEventListener('click', this.onOpenModal.bind(this))
     document.addEventListener('mousedown', this.checkClickOutside.bind(this))
-    document.addEventListener('mousewheel', this.disableScroll.bind(this), false)
   }
 
   componentWillUnmount () {
@@ -20,14 +19,17 @@ export default class Modal extends Component {
     document.removeEventListener('mousedown', this.checkClickOutside.bind(this))
   }
 
-  disableScroll (e) {
-    e.preventDefault()
-  }
-
   checkClickOutside = (e) => {
     if (this.modalRef && !this.modalRef.contains(e.target)) {
-      this.props.info.onHideModal()
+      this.onHideModal()
     }
+  }
+
+  onHideModal = (e) => {
+    this.props.info.onHideModal()
+    this.setState({
+      value: ''
+    })
   }
 
   onChangeValue = (e) => {
@@ -38,9 +40,7 @@ export default class Modal extends Component {
 
   onCommitResources = () => {
     this.props.info.onCommitResources(this.state.value)
-    this.setState({
-      value: ''
-    })
+    this.onHideModal()
   }
 
   onOpenModal = (e) => {
@@ -64,7 +64,7 @@ export default class Modal extends Component {
         <input value={value} onChange={this.onChangeValue} className='modal-input' type='text' placeholder='Input value' />
         <div className='modal-button-group'>
           <button onClick={this.onCommitResources} className='add'>Add Resources</button>
-          <button onClick={this.props.info.onHideModal} className='cancel'>Cancel</button>
+          <button onClick={this.onHideModal} className='cancel'>Cancel</button>
         </div>
       </div> : null
     )
