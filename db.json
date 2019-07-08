@@ -91,10 +91,12 @@
       "resources": [
         "Firefox",
         "Safari",
-        "Ubuntu",
         "Chrome"
       ],
-      "id": 6
+      "id": 6,
+      "resource": [
+        "Ubuntu"
+      ]
     },
     {
       "name": "bjstdmngbdr04.thoughtworks.com",
